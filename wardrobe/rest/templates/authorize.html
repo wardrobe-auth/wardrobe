@@ -1,0 +1,44 @@
+{% extends 'layouts/base-with-nav.html' %}
+
+{% block title %}authorize{% endblock %}
+
+{% block styles %}
+    {{ super() }}
+    <!-- Custom styles for this template -->
+    <link href="/static/css/starter-template.css" rel="stylesheet">
+{% endblock %}
+
+{% block main %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div>
+                    <p>
+                        어플리케이션: {{ grant.client.client_name }} 이 다음 권한을 요청합니다.
+                    </p>
+
+                    <p>
+                        <strong>{{ grant.request.scope }}</strong>
+                    </p>
+                </div>
+
+                <form action="" method="post">
+                    <div style="margin-bottom: 2em">
+                        <label>
+                            <input type="checkbox" name="confirm">
+                            <span>동의합니다</span>
+                        </label>
+                        {% if not user %}
+                            <p>You haven't logged in. Log in with:</p>
+                            <div>
+                                <input type="text" name="username">
+                            </div>
+                        {% endif %}
+                    </div>
+                    <button class="btn btn-primary">Submit</button>
+                </form>
+
+            </div>
+        </div>
+    </div>
+{% endblock %}

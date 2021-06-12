@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}{% endblock %}</title>
+
+    {% assets 'css_all' %}
+    <link rel="stylesheet" href="{{ ASSET_URL }}"></link>
+    {% endassets %}
+
+    <script type="module" src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine-ie11.min.js" defer></script>
+
+    {% block styles %}{% endblock %}
+    {% block scripts %}{% endblock %}
+</head>
+<body {% block body_attrs %}{% endblock %}>
+{% block body %}
+
+    <main {% block main_attrs %}class="container"{% endblock %}>
+    {% include "_partial/flash.html" %}
+
+    {% block main %}
+        <div class="starter-template text-center py-5 px-3">
+
+            <h1>Bootstrap starter template</h1>
+            <p class="lead">
+                Use this document as a way to quickly start any new project.<br> All you get is this
+                text and a mostly barebones HTML document.
+            </p>
+
+        </div>
+    {% endblock %}
+    </main><!-- /.container -->
+
+{% endblock %}
+</body>
+</html>

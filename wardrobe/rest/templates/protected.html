@@ -1,0 +1,16 @@
+{% extends 'layouts/base-with-nav.html' %}
+
+{% block title %}index{% endblock %}
+
+{% block styles %}
+    {{ super() }}
+    <!-- Custom styles for this template -->
+    <link href="/static/css/starter-template.css" rel="stylesheet">
+{% endblock %}
+
+{% block main %}
+    <h1>Protected Page</h1>
+
+    <p>id: {{ current_user.id }}</p>
+    <p>username: {{ current_user.username }}</p>
+{% endblock %}
