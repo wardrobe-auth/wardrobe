@@ -1,6 +1,6 @@
 from werkzeug.local import LocalProxy
 
-from wardrobe.rest.database import db
+from wardrobe.webapp.database import db
 from wardrobe.repositories.sqla.user import UserRepository
 
 _user_repo = None

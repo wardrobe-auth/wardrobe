@@ -1,4 +1,4 @@
-from wardrobe.rest.extensions import ma
+from wardrobe.webapp.extensions import ma
 
 
 class UserSchema(ma.Schema):

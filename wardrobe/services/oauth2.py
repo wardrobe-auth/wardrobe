@@ -1,7 +1,7 @@
 from authlib.integrations.flask_oauth2 import AuthorizationServer, ResourceProtector
 from authlib.integrations.sqla_oauth2 import create_bearer_token_validator
 
-from wardrobe.rest.database import db
+from wardrobe.webapp.database import db
 from wardrobe.services.grant import (
     AuthorizationCodeGrant,
     ResourceOwnerPasswordCredentialsGrant,

@@ -8,7 +8,7 @@ from authlib.integrations.sqla_oauth2 import (
 from flask_user import UserMixin
 from sqlalchemy.orm import backref
 
-from wardrobe.rest.database import db
+from wardrobe.webapp.database import db
 from wardrobe.domain.user import UserEntity
 
 

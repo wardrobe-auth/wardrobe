@@ -6,11 +6,11 @@ from webassets import Bundle
 
 from flask_social_login import SQLAlchemyConnectionDatastore
 from wardrobe.repositories.sqla.models import User, Connection, Role
-from wardrobe.rest.config import config
-from wardrobe.rest.database import db, migrate
-from wardrobe.rest.extensions import assets, cors, ma
-from wardrobe.rest.social import social
-from wardrobe.rest.user import user_manager
+from wardrobe.webapp.config import config
+from wardrobe.webapp.database import db, migrate
+from wardrobe.webapp.extensions import assets, cors, ma
+from wardrobe.webapp.social import social
+from wardrobe.webapp.user import user_manager
 from wardrobe.services.oauth2 import config_oauth
 
 
@@ -125,11 +125,11 @@ def init_social(app, db):
 
 
 def init_blueprint(app):
-    from wardrobe.rest.api import api as api_bp
-    from wardrobe.rest.api import admin as admin_bp
-    from wardrobe.rest.oauth import oauth2 as oauth_bp
-    from wardrobe.rest.swagger import swagger_bp
-    from wardrobe.rest.views import main as main_bp
+    from wardrobe.webapp.api import api as api_bp
+    from wardrobe.webapp.api import admin as admin_bp
+    from wardrobe.webapp.oauth import oauth2 as oauth_bp
+    from wardrobe.webapp.swagger import swagger_bp
+    from wardrobe.webapp.views import main as main_bp
 
     app.register_blueprint(main_bp, url_prefix="/")
     app.register_blueprint(api_bp, url_prefix="/api")

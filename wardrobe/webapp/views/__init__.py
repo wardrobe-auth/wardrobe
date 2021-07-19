@@ -9,9 +9,9 @@ from flask import (
 from flask_login import current_user
 from flask_user import roles_required, login_required
 
-from wardrobe.rest.database import db
+from wardrobe.webapp.database import db
 from wardrobe.repositories.sqla.models import User
-from wardrobe.rest.views.forms import ProfileUpdateForm
+from wardrobe.webapp.views.forms import ProfileUpdateForm
 
 main = Blueprint("main", __name__)
 

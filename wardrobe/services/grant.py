@@ -10,13 +10,13 @@ from flask import current_app
 from werkzeug.local import LocalProxy
 from werkzeug.security import gen_salt
 
-from wardrobe.rest.database import db
+from wardrobe.webapp.database import db
 from wardrobe.repositories.sqla.models import (
     User,
     OAuth2AuthorizationCode,
     OAuth2Token,
 )
-from wardrobe.rest.user import user_manager
+from wardrobe.webapp.user import user_manager
 
 
 @dataclasses.dataclass

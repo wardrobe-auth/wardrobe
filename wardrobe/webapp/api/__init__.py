@@ -5,9 +5,9 @@ from flask import jsonify
 from wardrobe.repositories.sqla.models import User
 from wardrobe.request_objects.user_id import UserIdRequestObject
 from wardrobe.request_objects.user_paginate import UserPaginateRequestObject
-from wardrobe.rest.database import db
-from wardrobe.rest.proxy import user_repo
-from wardrobe.rest.schema import UserSchema
+from wardrobe.webapp.database import db
+from wardrobe.webapp.proxy import user_repo
+from wardrobe.webapp.schema import UserSchema
 from wardrobe.services.oauth2 import require_oauth
 from wardrobe.use_cases.user_detail import UserDetailUseCase
 from wardrobe.use_cases.user_paginate import UserPaginateUseCase
