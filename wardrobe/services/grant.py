@@ -16,7 +16,7 @@ from wardrobe.repositories.sqla.models import (
     OAuth2AuthorizationCode,
     OAuth2Token,
 )
-from wardrobe.webapp.user import user_manager
+from wardrobe.webapp.user_manager import user_manager
 
 
 @dataclasses.dataclass

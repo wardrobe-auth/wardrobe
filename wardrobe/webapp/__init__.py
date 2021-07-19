@@ -10,7 +10,7 @@ from wardrobe.webapp.config import config
 from wardrobe.webapp.database import db, migrate
 from wardrobe.webapp.extensions import assets, cors, ma
 from wardrobe.webapp.social import social
-from wardrobe.webapp.user import user_manager
+from wardrobe.webapp.user_manager import user_manager
 from wardrobe.services.oauth2 import config_oauth
 
 
